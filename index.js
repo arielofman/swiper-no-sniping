@@ -9,6 +9,8 @@ const EAST_MATCHES = "542819148003278882";
 
 let tc_codes, tc_matches;
 
+let sentID = 0;
+
 let matches = {};
 let matchActive = false;
 
@@ -43,9 +45,6 @@ function addPlayer(game_code, mention) {
 
   matches[game_code].push(mention);
 }
-
-
-let sentID = 0;
 
 client.on('message', msg => {
   if(msg.channel.id === EAST_CODES && msg.content.length === 3) {
@@ -156,6 +155,9 @@ client.on('message', msg => {
   if (msg.content === '/end') {
       // delete last messages
       msg.delete();
+
+      // reset ID for editing
+      sentID = 0;
 
       vc = client.channels.get(SNIPE_COUNTDOWN_CHANNEL);
       if (vc) {
