@@ -56,7 +56,7 @@ client.on('message', msg => {
     addPlayer(game_code, mention);
 
     let buildJson = {embed: {
-                color: 1752220,
+                color: 3447003,
                 title: "Current servers:",
                 fields: [],
                 timestamp: new Date()
@@ -136,7 +136,7 @@ client.on('message', msg => {
         msg.member.voiceChannel.leave()
 
         tc_codes.send({embed: {
-          color: 3447003,
+          color: 3066993,
           title: "Waiting for server IDs...",
           fields: [
             {
