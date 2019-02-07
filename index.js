@@ -122,8 +122,9 @@ client.on('message', msg => {
     // delete last messages
     msg.delete();
 
-    // clear matches list
+    // restart match
     matchActive = true;
+    sentID = 0;
     matches = {};
 
     vc = client.channels.get(SNIPE_COUNTDOWN_CHANNEL);
