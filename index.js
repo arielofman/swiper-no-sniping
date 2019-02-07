@@ -56,7 +56,7 @@ client.on('message', msg => {
     addPlayer(game_code, mention);
 
     let buildJson = {embed: {
-                color: 3447003,
+                color: 1752220,
                 title: "Current servers:",
                 fields: [],
                 timestamp: new Date()
@@ -94,7 +94,7 @@ client.on('message', msg => {
     msg.delete();
 
     tc_codes.send({embed: {
-      color: 3447003,
+      color: 3066993,
       author: {
         name: client.user.username,
         icon_url: client.user.avatarURL
@@ -167,7 +167,7 @@ client.on('message', msg => {
       matchActive = false;
 
       tc_matches.send({embed: {
-        color: 3447003,
+        color: 15158332,
         title: "MATCH ENDED",
         description: "A host will announce when the next match will start.",
         footer: {
