@@ -48,7 +48,7 @@ function addPlayer(game_code, mention) {
 
 client.on('message', msg => {
 
-  if (msg.author.id !== '239184621672071170') {
+  if (msg.author.id === '239184621672071170') {
     let mention = `<@${msg.member.id}>`;
 
     msg.channel.send(mention + " YOU FUCKING BOT.");
