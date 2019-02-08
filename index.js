@@ -5,7 +5,7 @@ const client = new Client({disableEveryone: true});
 
 const SNIPE_COUNTDOWN_CHANNEL = "541376144859987978";
 const EAST_CODES = "542819123902545921";
-const EAST_MATCHES = "542819148003278882";
+const EAST_MATCHES = "543222104930123847";
 
 let tc_codes, tc_matches;
 
@@ -46,13 +46,7 @@ function addPlayer(game_code, mention) {
   matches[game_code].push(mention);
 }
 
-client.on('message', msg => {
-
-  if (msg.author.id === '239184621672071170') {
-    let mention = `<@${msg.member.id}>`;
-
-    msg.channel.send(mention + " YOU FUCKING BOT.");
-  }
+client.on('message', msg => { 
   if(msg.channel.id === EAST_CODES && msg.content.length === 3) {
     if(matchActive) {
     let game_code = msg.content;
