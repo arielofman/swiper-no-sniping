@@ -46,10 +46,10 @@ function addPlayer(game_code, mention) {
   matches[game_code].push(mention);
 }
 
-client.on('message', msg => { 
+client.on('message', msg => {
   if(msg.channel.id === EAST_CODES && msg.content.length === 3) {
     if(matchActive) {
-    let game_code = msg.content;
+    let game_code = msg.content.toLowerCase();
 
     let mention = `<@${msg.member.id}>`;
 
