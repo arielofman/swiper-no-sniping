@@ -1,2 +1,2 @@
 # swiper-no-sniping
-Fortnite scrims bot for Discord
+FN scrims bot for Discord
